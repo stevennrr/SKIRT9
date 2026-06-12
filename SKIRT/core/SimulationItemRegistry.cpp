@@ -1,4 +1,4 @@
-/*//////////////////////////////////////////////////////////////////
+/*//////////////////////////////////////////////////////////////////                                                   
 ////     The SKIRT project -- advanced radiative transfer       ////
 ////       © Astronomical Observatory, Ghent University         ////
 ///////////////////////////////////////////////////////////////// */
@@ -276,6 +276,16 @@
 
 ////////////////////////////////////////////////////////////////////
 
+/*//////////////////////////////////////////////////////////////////                                                   
+////     The SKIRT project -- advanced radiative transfer       ////
+////       © Junkai Zhang, University of Bath                  ////
+///////////////////////////////////////////////////////////////// */
+
+#include "clumpSEDFamily.hpp"
+#include "clumpSEDFamily.cpp"
+
+
+
 SimulationItemRegistry::SimulationItemRegistry(string version, string format)
 {
     // start a new schema
@@ -369,6 +379,8 @@ SimulationItemRegistry::SimulationItemRegistry(string version, string format)
     ItemRegistry::add<LyaGaussianSEDFamily>();
     ItemRegistry::add<LyaDoublePeakedSEDFamily>();
     ItemRegistry::add<LyaSEDFamilyDecorator>();
+    
+    ItemRegistry::add<clumpSEDFamily>(); 
 
     // wavelength distributions
     ItemRegistry::add<WavelengthDistribution>();
@@ -735,3 +747,7 @@ SimulationItemRegistry::~SimulationItemRegistry()
 }
 
 ////////////////////////////////////////////////////////////////////
+
+
+
+
